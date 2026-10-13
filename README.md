@@ -115,8 +115,8 @@
 ## 🧪 Running Unit & Integration Tests
 
 ```bash
-# Run complete test suite (includes 30-thread Thundering Herd concurrency & crypto tests)
-mvn clean test
+# Run complete test suite (31 automated unit, integration, crypto, and 30-thread concurrency tests)
+./mvnw clean test
 ```
 
 ---
