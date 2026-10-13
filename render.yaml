@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: finflow-core
+    env: docker
+    plan: free
+    region: singapore
+    dockerfilePath: Dockerfile
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://localhost:5432/finflow
+      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
+        value: update

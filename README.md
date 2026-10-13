@@ -18,6 +18,7 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-0891b2?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Docker](https://img.shields.io/badge/Docker-Multi--Stage-0891b2?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
 [![CI](https://img.shields.io/badge/CI-GitHub_Actions-0891b2?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/ronitgupta138/finflow-core/actions)
+[![Deploy to Render](https://img.shields.io/badge/Deploy_to-Render-0891b2?style=flat-square&logo=render&logoColor=white)](https://render.com/deploy?repo=https://github.com/ronitgupta138/finflow-core)
 
 </div>
 
@@ -141,6 +142,19 @@ curl -X POST http://localhost:8080/api/v1/mesh/simulate \
     "note": "Basement Coffee Offline UPI"
   }'
 ```
+
+---
+
+## ☁️ Cloud Deployment (Render / Railway / Docker)
+
+### 1-Click Deploy to Render
+Deploy FinFlow Core as a free cloud web service using the included `render.yaml` blueprint:
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/ronitgupta138/finflow-core)
+
+* Automatically builds the multi-stage Alpine JRE container via Dockerfile.
+* Exposes automated health checks on `/api/v1/health`.
+* Binds dynamically to `${PORT:-8080}` for zero-downtime container routing.
 
 ---
 
