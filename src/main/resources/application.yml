@@ -6,7 +6,7 @@ spring:
   application:
     name: finance-flow-api
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/financeflow_db}
+    url: ${JDBC_DATABASE_URL:${DB_URL:jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:financeflow_db}}}
     username: ${DB_USERNAME:postgres}
     password: ${DB_PASSWORD:postgres}
     driver-class-name: org.postgresql.Driver

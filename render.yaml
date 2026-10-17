@@ -1,3 +1,10 @@
+databases:
+  - name: finflow-db
+    databaseName: financeflow_db
+    user: finflow_user
+    plan: free
+    region: singapore
+
 services:
   - type: web
     name: finflow-core
@@ -5,13 +12,33 @@ services:
     plan: free
     region: singapore
     dockerfilePath: Dockerfile
-    healthCheckPath: /api/v1/health
+    healthCheckPath: /api/health
     envVars:
       - key: PORT
         value: 8080
-      - key: SPRING_PROFILES_ACTIVE
-        value: prod
-      - key: SPRING_DATASOURCE_URL
-        value: jdbc:postgresql://localhost:5432/finflow
+      - key: DB_HOST
+        fromDatabase:
+          name: finflow-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: finflow-db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: finflow-db
+          property: database
+      - key: DB_USERNAME
+        fromDatabase:
+          name: finflow-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: finflow-db
+          property: password
+      - key: JWT_SECRET
+        generateValue: true
+      - key: INGESTION_ENABLED
+        value: "true"
       - key: SPRING_JPA_HIBERNATE_DDL_AUTO
         value: update
