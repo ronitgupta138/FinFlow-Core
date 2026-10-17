@@ -23,7 +23,8 @@
 
 </div>
 
-> 🚀 **Live Production Deployment**: **[`https://finflow-core.onrender.com`](https://finflow-core.onrender.com)** — Spring Boot 3.3.5 web service connected to managed PostgreSQL 16 on Render with automated health monitoring.
+> 🚀 **Live Production Deployment**: **[`https://finflow-core.onrender.com`](https://finflow-core.onrender.com)** — Spring Boot 3.3.5 web service connected to managed PostgreSQL 16 on Render with automated health monitoring.  
+> ⚡ **Interactive Swagger API Sandbox**: **[`https://finflow-core.onrender.com/swagger-ui/index.html`](https://finflow-core.onrender.com/swagger-ui/index.html)** — Test all endpoints & JWT authentication directly in your browser.
 
 ---
 

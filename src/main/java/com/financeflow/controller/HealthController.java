@@ -87,6 +87,25 @@ public class HealthController {
                         margin-bottom: 24px;
                     }
                     .method { color: #38bdf8; font-weight: 700; }
+                    .btn-swagger {
+                        display: block;
+                        text-align: center;
+                        background: linear-gradient(135deg, #0284c7 0%, #0891b2 100%);
+                        color: #ffffff !important;
+                        font-weight: 700;
+                        font-size: 14px;
+                        padding: 12px 20px;
+                        border-radius: 8px;
+                        text-decoration: none;
+                        margin-bottom: 24px;
+                        box-shadow: 0 4px 14px rgba(8, 145, 178, 0.35);
+                        transition: transform 0.15s ease, box-shadow 0.15s ease;
+                    }
+                    .btn-swagger:hover {
+                        transform: translateY(-1px);
+                        box-shadow: 0 6px 20px rgba(8, 145, 178, 0.5);
+                        text-decoration: none !important;
+                    }
                     .footer {
                         border-top: 1px solid rgba(255, 255, 255, 0.08);
                         padding-top: 18px;
@@ -115,8 +134,10 @@ public class HealthController {
                         <div><span class="method">POST</span> /api/auth/login &bull; Stateless JWT Authentication</div>
                         <div><span class="method">GET</span>  /api/categories &bull; Expense Categories (JWT Required)</div>
                         <div><span class="method">GET</span>  /api/transactions &bull; Transaction History (JWT Required)</div>
-                        <div><span class="method">POST</span> /api/v1/mesh/settle &bull; Offline BLE Mesh Settlement</div>
+                        <div><span class="method">POST</span> /api/v1/mesh/simulate &bull; Offline BLE Mesh Simulation</div>
                     </div>
+
+                    <a href="/swagger-ui/index.html" class="btn-swagger">⚡ Open Interactive Swagger UI &rarr;</a>
 
                     <div class="footer">
                         <span>Engineered by <strong>Ronit Gupta</strong></span>

@@ -1,0 +1,21 @@
+name: Production Keep-Alive Ping
+
+on:
+  schedule:
+    # Ping every 14 minutes to eliminate Render free-tier container cold starts
+    - cron: '*/14 * * * *'
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Production Health Endpoint
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 https://finflow-core.onrender.com/api/health)
+          echo "Health check response code: $STATUS"
+          if [ "$STATUS" -ne 200 ]; then
+            echo "Warning: Service responded with HTTP $STATUS"
+            exit 1
+          fi
+          echo "Production instance is alive and healthy."

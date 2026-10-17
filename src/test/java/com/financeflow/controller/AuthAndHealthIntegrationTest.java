@@ -32,6 +32,18 @@ public class AuthAndHealthIntegrationTest {
     }
 
     @Test
+    void testSwaggerDocsAndUi() throws Exception {
+        mockMvc.perform(get("/v3/api-docs"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.openapi").exists())
+                .andExpect(jsonPath("$.info.title").value("FinFlow Core REST API"));
+
+        mockMvc.perform(get("/swagger-ui/index.html"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML));
+    }
+
+    @Test
     void testHealthEndpoint() throws Exception {
         mockMvc.perform(get("/api/health"))
                 .andExpect(status().isOk())
