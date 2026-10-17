@@ -12,7 +12,7 @@
 ### **FinFlow Core — Production-Grade Banking & Financial Aggregation REST Platform**
 #### *With Offline UPI Mesh Payment Settlement Engine*
 
-[![GitHub Stars](https://badgen.net/github/stars/ronitgupta138/finflow-core?icon=github&color=0891b2)](https://github.com/ronitgupta138/finflow-core/stargazers)
+[![GitHub Stars](https://img.shields.io/github/stars/ronitgupta138/FinFlow-Core?style=flat-square&logo=github&color=0891b2)](https://github.com/ronitgupta138/FinFlow-Core/stargazers)
 [![Java](https://img.shields.io/badge/Java-17-0891b2?style=flat-square&logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.3.5-0891b2?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
 [![Spring Security](https://img.shields.io/badge/Spring_Security-JWT-0891b2?style=flat-square&logo=springsecurity&logoColor=white)](https://spring.io/projects/spring-security)
