@@ -25,6 +25,13 @@ public class AuthAndHealthIntegrationTest {
     private ObjectMapper objectMapper;
 
     @Test
+    void testRootEndpoint() throws Exception {
+        mockMvc.perform(get("/"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML));
+    }
+
+    @Test
     void testHealthEndpoint() throws Exception {
         mockMvc.perform(get("/api/health"))
                 .andExpect(status().isOk())
