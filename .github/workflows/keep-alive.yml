@@ -12,10 +12,14 @@ jobs:
     steps:
       - name: Ping Production Health Endpoint
         run: |
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 https://finflow-core.onrender.com/api/health)
-          echo "Health check response code: $STATUS"
-          if [ "$STATUS" -ne 200 ]; then
-            echo "Warning: Service responded with HTTP $STATUS"
-            exit 1
-          fi
-          echo "Production instance is alive and healthy."
+          for i in {1..3}; do
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" --connect-timeout 10 --max-time 60 https://finflow-core.onrender.com/api/health || true)
+            echo "Attempt $i: HTTP $STATUS"
+            if [ "$STATUS" = "200" ]; then
+              echo "Production instance is alive and healthy."
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Warning: Service failed to respond with 200 after 3 attempts."
+          exit 1
