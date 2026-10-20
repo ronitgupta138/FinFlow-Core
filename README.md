@@ -20,11 +20,13 @@
 [![Docker](https://img.shields.io/badge/Docker-Multi--Stage-0891b2?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
 [![CI](https://img.shields.io/badge/CI-GitHub_Actions-0891b2?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/ronitgupta138/finflow-core/actions)
 [![Live API](https://img.shields.io/badge/Live_API-Online_200_OK-10b981?style=flat-square&logo=render&logoColor=white)](https://finflow-core.onrender.com)
+[![XERJ Corpus Hub](https://hub.xerj.org/contributors/ronitgupta138/badge.svg)](https://hub.xerj.org/contributors/ronitgupta138)
 
 </div>
 
 > 🚀 **Live Production Deployment**: **[`https://finflow-core.onrender.com`](https://finflow-core.onrender.com)** — Spring Boot 3.3.5 web service connected to managed PostgreSQL 16 on Render with automated health monitoring.  
-> ⚡ **Interactive Swagger API Sandbox**: **[`https://finflow-core.onrender.com/swagger-ui/index.html`](https://finflow-core.onrender.com/swagger-ui/index.html)** — Test all endpoints & JWT authentication directly in your browser.
+> ⚡ **Interactive Swagger API Sandbox**: **[`https://finflow-core.onrender.com/swagger-ui/index.html`](https://finflow-core.onrender.com/swagger-ui/index.html)** — Test all endpoints & JWT authentication directly in your browser.  
+> 🏛️ **Indexed by XERJ Corpus Hub**: **[`https://hub.xerj.org/contributors/ronitgupta138`](https://hub.xerj.org/contributors/ronitgupta138)** — Offline UPI mesh settlement engine selected as an AI-native reference implementation for autonomous coding agents.
 
 ---
 
