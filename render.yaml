@@ -1,10 +1,3 @@
-databases:
-  - name: finflow-db
-    databaseName: financeflow_db
-    user: finflow_user
-    plan: free
-    region: singapore
-
 services:
   - type: web
     name: finflow-core
@@ -17,25 +10,15 @@ services:
       - key: PORT
         value: 8080
       - key: DB_HOST
-        fromDatabase:
-          name: finflow-db
-          property: host
+        value: ep-floral-snow-b3quspl5-pooler.c-4.ap-southeast-1.aws.neon.tech
       - key: DB_PORT
-        fromDatabase:
-          name: finflow-db
-          property: port
+        value: 5432
       - key: DB_NAME
-        fromDatabase:
-          name: finflow-db
-          property: database
+        value: financeflow_db?sslmode=require
       - key: DB_USERNAME
-        fromDatabase:
-          name: finflow-db
-          property: user
+        value: financeflow_db_owner
       - key: DB_PASSWORD
-        fromDatabase:
-          name: finflow-db
-          property: password
+        value: npg_37oSAEPapduh
       - key: JWT_SECRET
         generateValue: true
       - key: INGESTION_ENABLED

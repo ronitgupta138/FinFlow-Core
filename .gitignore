@@ -47,3 +47,5 @@ buildNumber.properties
 .env
 .env.local
 *.local
+.neon
+finflow_backup.sql
