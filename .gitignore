@@ -49,3 +49,5 @@ buildNumber.properties
 *.local
 .neon
 finflow_backup.sql
+.agents/
+skills-lock.json
